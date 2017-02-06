@@ -1,0 +1,38 @@
+{
+  "name": "ReactNativeWebExample",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "web": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js --inline --hot --colors --quiet"
+  },
+  "dependencies": {
+    "react": "15.4.1",
+    "react-native": "0.40.0",
+    "react-native-web": "0.0.65",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "react-native-motion-manager": "https://github.com/connected-lab/react-native-motion-manager.git#v1.0.0"
+  },
+  "devDependencies": {
+    "babel-jest": "18.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-react-native": "1.9.1",
+    "enzyme": "^2.7.0",
+    "jest": "18.1.0",
+    "jsdom": "^9.9.1",
+    "react-addons-test-utils": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-test-renderer": "^15.4.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./test-utils/jsdom.js"
+    ]
+  }
+}
